@@ -1,17 +1,25 @@
 ; Задача 13
 ; Создать функцию, удаляющую в исходном 
 ; списке все повторные вхождения элементов
-(defun my-remove(a)
+(defun my-member(a lst)
 	(cond 
-		((null a) nil)
+		((null lst) nil)
+		((eq (car lst) a) t)
+		(t (my-member a (cdr lst)))
+	)
+)
+
+(defun my-remove(lst)
+	(cond 
+		((null lst) nil)
 		(
-			(member (car a)(cdr a)) 
-			(my-remove(cdr a))
+			(my-member (car lst)(cdr lst)) 
+			(my-remove(cdr lst))
 		)
 		(
 			t 
-			(cons (car a) 
-			(my-remove(cdr a)))
+			(cons (car lst) 
+			(my-remove(cdr lst)))
 		)
 	)
 )
