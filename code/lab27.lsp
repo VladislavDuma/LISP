@@ -21,3 +21,9 @@
 	)
 )
 ;(print(combine '(a b c d) '(1 2 3 4)))
+;(print(combine '(1 2 c d g y) '(1 2 3 4)))
+;(print(combine '(1 2 c d g y) '(1 2 3 4 5 6 7 8 9)))
+
+;(A 1 B 2 C 3 D 4) 
+;(1 1 2 2 C 3 D 4) 
+;(1 1 2 2 C 3 D 4 G 5 Y 6) 
