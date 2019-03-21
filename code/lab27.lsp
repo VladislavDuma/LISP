@@ -1,4 +1,7 @@
-﻿(defun combine (ls1 ls2)
+;Задача 27
+;Определите функцию, которая, чередуя элементы списков (a b...) и (1 2...), образует новый список (a 1 b 2 ...)
+
+(defun combine (ls1 ls2)
 	(cond 
 		(
 			(null ls1)
@@ -17,4 +20,4 @@
 		)
 	)
 )
-(print(combine '(a b c d) '(1 2 3 4)))
+;(print(combine '(a b c d) '(1 2 3 4)))
