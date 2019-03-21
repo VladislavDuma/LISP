@@ -1,4 +1,9 @@
-﻿(defun set-city(city-name x y)
+;Задача 45
+;Предложим, что у имени города есть свойства X и Y, которые содержат координаты
+;места нахождения города относительно некоторого начала координат. Напишите функцию
+;(РАССТОЯНИЕ A B), вычисляющую расстояние между городами A и B.
+
+(defun set-city(city-name x y)
 	(setf 
 		(get city-name `x) 
 		x
@@ -27,3 +32,9 @@
 	(set-city city2 x2 y2)
 	(distance city1 city2)
 )
+
+;(print(main 'C1 'C2 0 0 10 10))
+;(print(main 'Yalta 'Simferopol 0 0 8 6))
+
+;14.142136 
+;10
