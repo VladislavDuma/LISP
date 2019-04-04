@@ -9,7 +9,7 @@
 	(setf (get person `father) father)
 )
 
-(defun parents(person)
+(defun set-parents(person)
 	(list (get person `mother) (get person `father))
 )
 
@@ -24,17 +24,17 @@
 (defun main(person1 person2 parents1 parents2)
 	(setprop person1 (car parents1) (cadr parents1))
 	(setprop person2 (car parents2) (cadr parents2))
-	(print(parents person1))
-	(print(parents person2))
+	(print(set-parents person1))
+	(print(set-parents person2))
 	(siblings person1 person2)
 )
 
-;(main 'alina 'ivan '(petrova elena) '(petrova elena))
-;(main 'alina 'ivan '(ivanov igor) '(petrova elena))
+;(main 'alina 'ivan '(elena igor) '(elena oleg))
+;(main 'alina 'ivan '(dasha igor) '(elena oleg))
 
-;(PETROVA ELENA) 
-;(PETROVA ELENA) 
+;(ELENA IGOR) 
+;(ELENA OLEG) 
 ;T 
-;(IVANOV IGOR) 
-;(PETROVA ELENA) 
-;NIL
+;(DASHA IGOR) 
+;(ELENA OLEG) 
+;NIL 
