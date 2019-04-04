@@ -30,3 +30,19 @@
 		(t nil)
 	)
 )
+
+;subset '(1 2 3) '(1 2 3 4 5))
+;subset '(3 2) '(1 2 3 4 5))
+;subset '(1 2 3) '(2 3 4 5))
+
+;T
+;T 
+;NIL
+
+;proper-subset '() '(1 2 3 4 5))
+;proper-subset '(1 2 3) '(1 2 3 4 5 6))
+;proper-subset '(1 2 3) '(1 2 3))
+
+;NIL 
+;T 
+;NIL
