@@ -28,3 +28,13 @@
 	(print(parents person2))
 	(siblings person1 person2)
 )
+
+;(main 'alina 'ivan '(petrova elena) '(petrova elena))
+;(main 'alina 'ivan '(ivanov igor) '(petrova elena))
+
+;(PETROVA ELENA) 
+;(PETROVA ELENA) 
+;T 
+;(IVANOV IGOR) 
+;(PETROVA ELENA) 
+;NIL
