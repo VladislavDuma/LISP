@@ -10,20 +10,20 @@
 	)
 )
 
-(defun my-subset(set1 set2)
+(defun subset(set1 set2)
 	(cond
 		((null set1) t)
-		((my-member (car set1) set2) (my-subset (cdr set1) set2))
+		((my-member (car set1) set2) (subset (cdr set1) set2))
 		(t nil)
 	)
 )
 
-(defun my-proper-subset(set1 set2)
+(defun proper-subset(set1 set2)
 	(cond
 		((null set1) nil)
-		((my-subset set1 set2) 
+		((subset set1 set2) 
 			(cond
-				((my-subset set2 set1) nil)
+				((subset set2 set1) nil)
 				(t t)
 			)
 		)
