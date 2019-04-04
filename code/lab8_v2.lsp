@@ -3,18 +3,28 @@
 ;список положительных и список отрицательных чисел
 
 (defun get-positives (lst)
-	(cond 
-		((null lst) nil)
-		((> (car lst) 0) (cons (car lst) (get-positives (cdr lst))))
-		(t (get-positives (cdr lst)))
+	(
+		(lambda (first rest)
+			(cond 
+				((null lst) nil)
+				((> first 0) (cons first (get-positives rest)))
+				(t (get-positives rest))
+			)
+		)
+		(car lst) (cdr lst)
 	)
 )
 
 (defun get-negatives (lst)
-	(cond 
-		((null lst) nil)
-		((<= (car lst) 0) (cons (car lst) (get-negatives (cdr lst))))
-		(t (get-negatives (cdr lst)))
+	(
+		(lambda (first rest)
+			(cond 
+				((null lst) nil)
+				((<= first 0) (cons first (get-negatives rest)))
+				(t (get-negatives rest))
+			)
+		)
+		(car lst) (cdr lst)
 	)
 )
 
