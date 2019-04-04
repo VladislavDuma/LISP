@@ -10,17 +10,21 @@
 )
 
 (defun my-remove(lst)
-	(cond 
-		((null lst) nil)
-		(
-			(my-member (car lst)(cdr lst)) 
-			(my-remove(cdr lst))
+	(
+		(lambda (first rest)
+			(cond 
+				((null lst)	nil)
+				(
+					(my-member first rest)
+					(my-remove rest)
+				)
+				(
+					t 
+					(cons first (my-remove rest))
+				)
+			)
 		)
-		(
-			t 
-			(cons (car lst) 
-			(my-remove(cdr lst)))
-		)
+		(car lst)(cdr lst)
 	)
 )
 
