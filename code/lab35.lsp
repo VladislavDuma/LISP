@@ -1,4 +1,8 @@
-﻿(defun my-member(el lst)
+;Задача 35
+;Определите функцию ПОДМНОЖЕСТВО, которая проверяет, является ли одно множество
+;подмножеством другого. Определите также СОБСТВЕННОЕ-ПОДМНОЖЕСТВО.
+
+(defun my-member(el lst)
 	(cond
 		((null lst) nil)
 		((eq (car lst) el) t)
@@ -20,7 +24,7 @@
 		((my-subset set1 set2) 
 			(cond
 				((my-subset set2 set1) nil)
-				(t	t)
+				(t t)
 			)
 		)
 		(t nil)
