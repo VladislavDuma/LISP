@@ -5,12 +5,12 @@
 ;и предикат (сестры-братья x1 x2), который истинен в случае, 
 ;если x1 и x2 — сестры или братья, родные или с одним общим родителем.
 
-(defun setprop(person mother father)
+(defun set-parents(person mother father)
 	(setf (get person `mother) mother)
 	(setf (get person `father) father)
 )
 
-(defun set-parents(person)
+(defun get-parents(person)
 	(list (get person `mother) (get person `father))
 )
 
@@ -23,10 +23,10 @@
 )
 
 (defun main(person1 person2 parents1 parents2)
-	(setprop person1 (car parents1) (cadr parents1))
-	(setprop person2 (car parents2) (cadr parents2))
-	(print(set-parents person1))
-	(print(set-parents person2))
+	(set-parents person1 (car parents1) (cadr parents1))
+	(set-parents person2 (car parents2) (cadr parents2))
+	(print(get-parents person1))
+	(print(get-parents person2))
 	(siblings person1 person2)
 )
 
