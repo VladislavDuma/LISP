@@ -11,6 +11,8 @@
 	)
 )
 
-;(abc '(a b c))
-
+;(main '(a b c))
 ;(((A) B) C)
+
+;(main '(a b c d e g))
+;((((((A) B) C) D) E) G) 
