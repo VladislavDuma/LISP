@@ -4,5 +4,5 @@
 mymult [] = []
 mymult (h:t) = h * 10 : mymult t
 
-mymult [1..5]
-[10,20,30,40,50]
+--mymult [1..5]
+--[10,20,30,40,50]
