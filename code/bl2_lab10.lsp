@@ -3,13 +3,13 @@
 
 (defun a-b-generator ()
 	(let 
-		((seq nil) (next-el 'b))
+		((lst nil) (next-el 'b))
 		(lambda ()
 			(if (eq next-el 'b) 
 				(setq next-el 'a)
 				(setq next-el 'b)
 			)
-			(setq seq (cons next-el seq))
+			(setq lst (cons next-el lst))
 		)
 	)
 )
