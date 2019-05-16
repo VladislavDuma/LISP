@@ -18,4 +18,7 @@ main_list (h_main:t_main) sec_list
             | el_main == h = True 
             | otherwise    = check_other el_main t
 
---
+--main_list [1..4] [2..6]
+--[2,3,4]
+--main_list [2..5] [0..6]
+--[2,3,4,5]
